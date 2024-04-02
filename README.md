@@ -22,7 +22,7 @@ With `cursor()`:
 ```php
 use App\Models\User;
 
-User::query()->with(['articles', 'friends'])->cursor(50)->each(function (User $users) {
+User::query()->with(['articles', 'friends'])->cursor()->each(function (User $users) {
     // Process user... But 'articles' and 'friend' won't be loaded here :(
 });
 ```
