@@ -2,14 +2,14 @@
 
 namespace Itsimiro\ChunkCursor\Tests;
 
+use Illuminate\Database\Capsule\Manager as DB;
 use Illuminate\Database\ConnectionInterface;
 use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Database\Eloquent\Model as Eloquent;
 use Illuminate\Database\Schema\Builder;
 use Illuminate\Foundation\Application;
 use Itsimiro\ChunkCursor\Providers\LaravelChunkCursorProvider;
 use PHPUnit\Framework\TestCase;
-use Illuminate\Database\Capsule\Manager as DB;
-use Illuminate\Database\Eloquent\Model as Eloquent;
 
 class DatabaseChunkCursorTest extends TestCase
 {

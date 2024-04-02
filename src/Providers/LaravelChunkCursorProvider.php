@@ -2,9 +2,9 @@
 
 namespace Itsimiro\ChunkCursor\Providers;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\LazyCollection;
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Database\Eloquent\Builder;
 
 class LaravelChunkCursorProvider extends ServiceProvider
 {
@@ -25,12 +25,13 @@ class LaravelChunkCursorProvider extends ServiceProvider
     }
 
     public function register(): void
-    {}
+    {
+    }
 
     public function provides(): array
     {
         return [
-            'laravel-chunk-cursor'
+            'laravel-chunk-cursor',
         ];
     }
 }
