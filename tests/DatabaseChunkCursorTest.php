@@ -32,8 +32,6 @@ class DatabaseChunkCursorTest extends TestCase
 
     /**
      * Setup the database schema.
-     *
-     * @return void
      */
     public function createSchema(): void
     {
@@ -87,6 +85,8 @@ class DatabaseChunkCursorTest extends TestCase
 class DatabaseChunkCursorTestUser extends Eloquent
 {
     protected $table = 'users';
+
     protected $fillable = ['id', 'email'];
+
     public $timestamps = false;
 }
