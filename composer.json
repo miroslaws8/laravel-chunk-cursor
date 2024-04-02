@@ -1,48 +1,53 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "itsimiro/laravel-chunk-cursor",
+    "description": "Laravel Eloquent cursor with eager loading and chunking",
     "keywords": [
-        ":vendor_name",
-        ":package_slug"
+        "laravel",
+        "eloquent"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/miroslaws8/laravel-chunk-cursor",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
-            "role": "Developer"
+            "name": "itsimiro",
+            "email": "itsimiro@gmail.com",
+            "role": "Maintainer"
         }
     ],
     "require": {
-        "php": "^8.1"
+        "php": "^8.1",
+        "laravel/framework": "^10.0|^11.0"
     },
     "require-dev": {
-        :require_dev_testing,
-        :require_dev_codestyle,
+        "phpunit/phpunit": "^10.0|^11.0",
         "spatie/ray": "^1.28"
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src"
+            "Itsimiro\\ChunkCursor\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "Itsimiro\\ChunkCursor\\Tests\\": "tests"
         }
     },
     "scripts": {
-        :scripts_testing,
-        :scripts_codestyle
+        "test": "./vendor/bin/phpunit"
     },
     "config": {
         "sort-packages": true,
         "allow-plugins": {
-            :plugins_testing,
             "phpstan/extension-installer": true
         }
     },
-    "minimum-stability": "dev",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Itsimiro\\ChunkCursor\\Providers\\LaravelChunkCursorProvider"
+            ]
+        }
+    },
+    "minimum-stability": "stable",
     "prefer-stable": true
 }
